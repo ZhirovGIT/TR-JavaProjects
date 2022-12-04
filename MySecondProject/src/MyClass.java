@@ -31,12 +31,12 @@ public class MyClass {
 		int result = 1;
 
 		if (power == 0) return 1;
+		if (power < 0) return -1;
 
-		do
+		for(; power > 0; power--)
 		{
 			result *= number;
-			power--;
-		} while (power != 0);
+		}
 		
 		return result;
 	}
@@ -50,11 +50,11 @@ public class MyClass {
 			return -1;
 		} else if (number == 0)
 			return 1;
-
-		do {
-			result *= number;	// The product of each decrement number
-			number--;			// Decrement
-		} while (number != 0);
+		
+		for(; number > 0; number--)
+		{
+			result *= number;
+		}
 
 		return result;
 	}
