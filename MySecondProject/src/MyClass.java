@@ -65,10 +65,10 @@ public class MyClass {
 
 		if (number > 0) {
 			while (number != 0) {
-				int buf = number % 10; // save number
+				int buf = number % 10;	// save number
 				if (buf % 2 == 0)
-					count++; // check
-				number /= 10; // delete last digit
+					count++;			// check
+				number /= 10;			// delete last digit
 			}
 		} else {
 			System.out.println("Wrong input!");
