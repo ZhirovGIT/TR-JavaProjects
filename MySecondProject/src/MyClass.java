@@ -31,7 +31,11 @@ public class MyClass {
 		int result = 1;
 
 		if (power == 0) return 1;
-		if (power < 0) return -1;
+		else if (power < 0) 
+		{
+			System.out.println("Wrong power!");
+			return -1;
+		}
 
 		for(; power > 0; power--)
 		{
