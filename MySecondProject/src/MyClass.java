@@ -83,10 +83,7 @@ public class MyClass {
 		int count = 0;
 
 		if (number > 0) {
-			while (number != 0) {
-				number /= 10;
-				count++;
-			}
+			for(; number != 0; number /= 10) count++;
 		} else {
 			System.out.println("Wrong input!");
 			return -1;
