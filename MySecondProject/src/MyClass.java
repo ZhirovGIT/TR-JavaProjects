@@ -31,11 +31,7 @@ public class MyClass {
 		int result = 1;
 
 		if (power == 0) return 1;
-		else if (power < 0) 
-		{
-			System.out.println("Wrong power!");
-			return -1;
-		}
+		else if (power < 0) return -1;
 
 		for(; power > 0; power--)
 		{
@@ -49,11 +45,8 @@ public class MyClass {
 	public static int factorial(int number) {
 		int result = 1;
 
-		if (number <= 0) {
-			System.out.println("Wrong input!");
-			return -1;
-		} else if (number == 0)
-			return 1;
+		if (number <= 0) return -1;
+		else if (number == 0) return 1;
 		
 		for(; number > 0; number--)
 		{
@@ -74,10 +67,7 @@ public class MyClass {
 					count++;			// check
 				number /= 10;			// delete last digit
 			}
-		} else {
-			System.out.println("Wrong input!");
-			return -1;
-		}
+		} else return -1;
 
 		return count;
 	}
@@ -88,10 +78,7 @@ public class MyClass {
 
 		if (number > 0) {
 			for(; number != 0; number /= 10) count++;
-		} else {
-			System.out.println("Wrong input!");
-			return -1;
-		}
+		} else return -1;
 		return count;
 	}
 
