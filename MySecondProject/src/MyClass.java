@@ -2,7 +2,7 @@
 public class MyClass {
 
 	public static void main(String[] args) {
-		int number = 12345;
+		int number = 123456;
 		System.out.println("Number = " + number);
 
 		// Task 1
@@ -61,11 +61,9 @@ public class MyClass {
 		int count = 0;
 
 		if (number > 0) {
-			while (number != 0) {
-				int buf = number % 10;	// save number
-				if (buf % 2 == 0)
-					count++;			// check
-				number /= 10;			// delete last digit
+			for(; number != 0; number /= 10)
+			{
+				if(number % 2 == 0) count++;
 			}
 		} else return -1;
 
