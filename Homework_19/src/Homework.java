@@ -4,7 +4,7 @@ public class Homework {
 
 	public static void main(String[] args) {
 		// Initialize array
-		int size = 13;
+		int size = 20;
 		int min = -50, max = 50;
 		int[] array = new int[size];	// add empty array
 		
@@ -29,6 +29,8 @@ public class Homework {
 		
 		// Task 3
 		System.out.println("Task 3.");
+		ArrayUtils.fillArray(array, min, max);
+		ArrayUtils.printArray(array);
 	}
 
 }

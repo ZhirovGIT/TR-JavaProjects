@@ -14,6 +14,38 @@ public class ArrayUtils {
 
 	}
 
+	// Print array reverse
+	public static void printArrayReverse(int[] arr) {
+		if (arr == null)
+			return;
+
+		for (int i = arr.length - 1; i >= 0; i--) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+
+	}
+
+	// Print array strings
+	public static void printArrayStrings(String[] strs) {
+		if (strs == null)
+			return;
+		for (int i = 0; i >= strs.length; i++) {
+			System.out.print(strs[i] + " ");
+		}
+		System.out.println();
+	}
+
+	// Print array strings reverse
+	public static void printArrayStringsReverse(String[] strs) {
+		if (strs == null)
+			return;
+		for (int i = strs.length - 1; i >= 0; i--) {
+			System.out.print(strs[i] + " ");
+		}
+		System.out.println();
+	}
+
 	// Print odds index
 	public static void printOddsIndex(int[] arr) {
 		if (arr == null)
