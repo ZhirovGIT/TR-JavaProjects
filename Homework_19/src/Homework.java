@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 import MyUtils.ArrayUtils;
 
 public class Homework {
@@ -41,7 +43,7 @@ public class Homework {
 		ArrayUtils.fillArray(array, min, max);
 		ArrayUtils.printArray(array);
 		
-		
+		ArrayUtils.printArrayReverse(array);
 	}
 
 }
