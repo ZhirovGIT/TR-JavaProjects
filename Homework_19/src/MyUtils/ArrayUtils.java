@@ -14,6 +14,22 @@ public class ArrayUtils {
 
 	}
 
+	// Print odds index
+	public static void printOddsIndex(int[] arr) {
+		for (int i = 1; i < arr.length; i += 2) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+
+	// Print evens index
+	public static void printEvensIndex(int[] arr) {
+		for (int i = 0; i < arr.length; i += 2) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+
 	// Fill array random numbers
 	public static void fillArray(int[] arr, int min, int max) {
 		if (arr == null || min > max)
@@ -36,18 +52,60 @@ public class ArrayUtils {
 
 		return res;
 	}
-
-	// Average
-	public static float avg(int[] arr) {
-		float sum = 0;
-		float average = 0;
-
+	
+	// Sum elements array
+	public static int sumElements(int[] arr) {
+		int sum = 0;
 		for (int i = 0; i < arr.length; i++) {
 			sum += arr[i];
 		}
-		average = sum / arr.length;
+		return sum;
+	}
 
-		return average;
+	// Sum even index elements
+	public static int sumEvenIndexElements(int[] arr) {
+		int sum = 0;
+
+		int i;
+		for (i = 0; i < arr.length; i += 2) {
+			sum += arr[i];
+		}
+		return sum;
+	}
+
+	// Sum odd index elements
+	public static int sumOddIndexElements(int[] arr) {
+		int sum = 0;
+
+		int i;
+		for (i = 1; i < arr.length; i += 2) {
+			sum += arr[i];
+		}
+		return sum;
+	}
+
+	// Sum even elements array
+	public static int sumEvenElements(int[] arr) {
+		int sum = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0)
+				sum += arr[i];
+		}
+
+		return sum;
+	}
+
+	// Sum odd elements array
+	public static int sumOddElements(int[] arr) {
+		int sum = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0)
+				sum += arr[i];
+		}
+
+		return sum;
 	}
 
 	// Sum first and last positive positions
@@ -69,6 +127,19 @@ public class ArrayUtils {
 		// if we did not meet positive numbers in the array
 		if (firstNum != -1)
 			System.out.println("Sum = " + (firstNum + lastNum));
+	}
+
+	// Average
+	public static float avg(int[] arr) {
+		float sum = 0;
+		float average = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+		average = sum / arr.length;
+
+		return average;
 	}
 
 	// Search a value in array
