@@ -154,8 +154,7 @@ public class ArrayUtils {
 	}
 
 	// Check sorted array
-	// Check sorted array
-public static int isSortedArray(int[] arr) {
+	public static int isSortedArray(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			if (arr[i] > arr[i + 1])
 				return 0;		
@@ -163,9 +162,7 @@ public static int isSortedArray(int[] arr) {
 		return 1;
 	}
 
-	// Swap elements (for sort)
-
-	// Swap element
+	// Swap element (for sort)
 	public static void swap(int[] arr, int i, int j) {
 		int buf = arr[i];
 		arr[i] = arr[j];
