@@ -31,6 +31,9 @@ public class Homework {
 		System.out.println("Task 3.");
 		ArrayUtils.fillArray(array, min, max);
 		ArrayUtils.printArray(array);
+		
+		ArrayUtils.firstPosLastNegReverse(array);
+		ArrayUtils.printArray(array);
 	}
 
 }

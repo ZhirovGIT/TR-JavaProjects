@@ -582,4 +582,26 @@ public class ArrayUtils {
 			}
 		}
 	}
+
+	// Reverse first positive and last negative elements
+	public static void firstPosLastNegReverse(int[] arr) {
+		if (arr == null)
+			return;
+
+		int buf01 = 0, buf02 = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > 0) {
+				buf01 = i;
+				break;
+			}
+		}
+		for (int j = arr.length - 1; j >= 0; j--) {
+			if (arr[j] < 0) {
+				buf02 = j;
+				break;
+			}
+		}
+		swap(arr, buf01, buf02);
+	}
 }
