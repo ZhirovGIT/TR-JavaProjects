@@ -16,6 +16,8 @@ public class ArrayUtils {
 
 	// Print odds index
 	public static void printOddsIndex(int[] arr) {
+		if (arr == null)
+			return;
 		for (int i = 1; i < arr.length; i += 2) {
 			System.out.print(arr[i]);
 		}
@@ -24,6 +26,8 @@ public class ArrayUtils {
 
 	// Print evens index
 	public static void printEvensIndex(int[] arr) {
+		if (arr == null)
+			return;
 		for (int i = 0; i < arr.length; i += 2) {
 			System.out.print(arr[i]);
 		}
@@ -52,9 +56,14 @@ public class ArrayUtils {
 
 		return res;
 	}
-	
+
 	// Sum elements array
 	public static int sumElements(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int sum = 0;
 		for (int i = 0; i < arr.length; i++) {
 			sum += arr[i];
@@ -64,6 +73,11 @@ public class ArrayUtils {
 
 	// Sum even index elements
 	public static int sumEvenIndexElements(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int sum = 0;
 
 		int i;
@@ -75,6 +89,11 @@ public class ArrayUtils {
 
 	// Sum odd index elements
 	public static int sumOddIndexElements(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int sum = 0;
 
 		int i;
@@ -86,6 +105,11 @@ public class ArrayUtils {
 
 	// Sum even elements array
 	public static int sumEvenElements(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int sum = 0;
 
 		for (int i = 0; i < arr.length; i++) {
@@ -98,6 +122,11 @@ public class ArrayUtils {
 
 	// Sum odd elements array
 	public static int sumOddElements(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int sum = 0;
 
 		for (int i = 0; i < arr.length; i++) {
@@ -110,6 +139,9 @@ public class ArrayUtils {
 
 	// Sum first and last positive positions
 	public static void sumFirstLastPos(int[] arr) {
+		if (arr == null)
+			return;
+
 		int firstNum = -1, lastNum = -1;
 
 		for (int i = 0; i < arr.length; i++) {
@@ -131,6 +163,11 @@ public class ArrayUtils {
 
 	// Average
 	public static float avg(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		float sum = 0;
 		float average = 0;
 
@@ -144,6 +181,11 @@ public class ArrayUtils {
 
 	// Search a value in array
 	public static int binarySearch(int[] arr, int value) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int left = 0;
 		int right = arr.length - 1;
 		int count = 0;
@@ -166,6 +208,11 @@ public class ArrayUtils {
 
 	// Search a value in array and return index
 	public static int binarySearchIndex(int[] arr, int number) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int left = 0;
 		int right = arr.length - 1;
 
@@ -184,6 +231,11 @@ public class ArrayUtils {
 
 	// Search max index
 	public static int searchMaxIndex(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int max = 0;
 
 		for (int i = 0; i < arr.length; i++) {
@@ -195,6 +247,11 @@ public class ArrayUtils {
 
 	// Search min index
 	public static int searchMinIndex(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
 		int min = 0;
 
 		for (int i = 0; i < arr.length; i++) {
@@ -206,8 +263,13 @@ public class ArrayUtils {
 
 	// Search max element
 	public static int searchMaxElement(int[] arr) {
-		int i, max = arr[0];
-		for (i = 1; i < arr.length; i++) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
+		int max = arr[0];
+		for (int i = 1; i < arr.length; i++) {
 			if (max < arr[i])
 				max = arr[i];
 		}
@@ -216,8 +278,13 @@ public class ArrayUtils {
 
 	// Search min element
 	public static int searchMinElement(int[] arr) {
-		int i, min = arr[0];
-		for (i = 1; i < arr.length; i++) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
+
+		int min = arr[0];
+		for (int i = 1; i < arr.length; i++) {
 			if (min > arr[i])
 				min = arr[i];
 		}
@@ -226,7 +293,10 @@ public class ArrayUtils {
 
 	// Search min element in range
 	public static int searchMinElementInRange(int[] arr, int startIndex, int finishIndex) {
-		if (startIndex < 0 || finishIndex >= arr.length || startIndex > finishIndex) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		} else if (startIndex < 0 || finishIndex >= arr.length || startIndex > finishIndex) {
 			System.out.println("Wrong range\n");
 			return 0;
 		}
@@ -241,7 +311,10 @@ public class ArrayUtils {
 
 	// Search max element in range
 	public static int searchMaxElementInRange(int[] arr, int startIndex, int finishIndex) {
-		if (startIndex < 0 || finishIndex >= arr.length || startIndex > finishIndex) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		} else if (startIndex < 0 || finishIndex >= arr.length || startIndex > finishIndex) {
 			System.out.println("Wrong range\n");
 			return 0;
 		}
@@ -256,6 +329,10 @@ public class ArrayUtils {
 
 	// Check sorted array
 	public static int isSortedArray(int[] arr) {
+		if (arr == null) {
+			System.out.println("Array is null");
+			return 0;
+		}
 		for (int i = 1; i < arr.length; i++) {
 			if (arr[i] > arr[i + 1])
 				return 0;
@@ -265,6 +342,9 @@ public class ArrayUtils {
 
 	// Swap element (for sort)
 	public static void swap(int[] arr, int i, int j) {
+		if (arr == null)
+			return;
+
 		int buf = arr[i];
 		arr[i] = arr[j];
 		arr[j] = buf;
@@ -272,6 +352,9 @@ public class ArrayUtils {
 
 	// Bubble sort
 	public static void bubbleSort(int[] arr) {
+		if (arr == null)
+			return;
+
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = 0; j < arr.length - 1 - i; j++) {
 				if (arr[j] > arr[j + 1])
@@ -282,6 +365,9 @@ public class ArrayUtils {
 
 	// Bubble sort - reverse
 	public static void bubbleSortReverse(int[] arr) {
+		if (arr == null)
+			return;
+
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = 0; j < arr.length - 1 - i; j++) {
 				if (arr[j] < arr[j + 1])
@@ -293,6 +379,9 @@ public class ArrayUtils {
 
 	// Bubble sort - odd first
 	public static void bubbleSortOddFirst(int[] arr) {
+		if (arr == null)
+			return;
+
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr.length - i - 1; j++) {
 				if (arr[j] % 2 == 0)
@@ -303,6 +392,9 @@ public class ArrayUtils {
 
 	// Bubble sort - even first
 	public static void bubbleSortEvenFirst(int[] arr) {
+		if (arr == null)
+			return;
+
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = 0; j < arr.length - 1 - i; j++) {
 				if (arr[j] % 2 != 0)
@@ -313,7 +405,9 @@ public class ArrayUtils {
 
 	// Bubble sort in range
 	public static void bubbleSortInRange(int[] arr, int start, int finish) {
-		if (start < 0 || finish >= arr.length || start > finish) {
+		if (arr == null)
+			return;
+		else if (start < 0 || finish >= arr.length || start > finish) {
 			System.out.println("Wrong range\n");
 			return;
 		}
@@ -327,6 +421,9 @@ public class ArrayUtils {
 
 	// Select sort
 	public static void selectSort(int[] arr) {
+		if (arr == null)
+			return;
+
 		int min_i, min_e;
 
 		for (int i = 0; i < arr.length - 1; i++) {
@@ -346,6 +443,9 @@ public class ArrayUtils {
 
 	// SelectSort - reverse
 	public static void selectSortReverse(int[] arr) {
+		if (arr == null)
+			return;
+
 		int min_i, min_e;
 		for (int i = 0; i < arr.length - 1; i++) {
 			min_e = arr[i];
@@ -364,6 +464,9 @@ public class ArrayUtils {
 
 	// Select sort - odd first
 	public static void selectSortOddFirst(int[] arr) {
+		if (arr == null)
+			return;
+
 		int min_i;
 		for (int i = 0; i < arr.length - 1; i++) {
 			min_i = i;
@@ -380,6 +483,9 @@ public class ArrayUtils {
 
 	// Select sort - even first
 	public static void selectSortEvenFirst(int[] arr) {
+		if (arr == null)
+			return;
+
 		int min_i;
 		for (int i = 0; i < arr.length - 1; i++) {
 			min_i = i;
@@ -396,7 +502,9 @@ public class ArrayUtils {
 
 	// Select sort in range
 	public static void selectSortInRange(int[] arr, int start, int finish) {
-		if (start < 0 || finish >= arr.length || start > finish) {
+		if (arr == null)
+			return;
+		else if (start < 0 || finish >= arr.length || start > finish) {
 			System.out.println("Wrong range\n");
 			return;
 		}
@@ -420,6 +528,8 @@ public class ArrayUtils {
 
 	// Take a sorted array and insert an element into it
 	public static void insertPosition(int[] arr01, int[] arr02, int value) {
+		if (arr01 == null && arr02 == null)
+			return;
 		int myIndex = 0;
 		for (int i = 0; i < arr01.length; i++) {
 
