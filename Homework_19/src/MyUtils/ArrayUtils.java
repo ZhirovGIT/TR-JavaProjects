@@ -142,7 +142,7 @@ public class ArrayUtils {
 		}
 		return max;
 	}
-	
+
 	// Search min element
 	public static int searchMinElement(int[] arr) {
 		int i, min = arr[0];
@@ -153,11 +153,41 @@ public class ArrayUtils {
 		return min;
 	}
 
+	// Search min element in range
+	public static int searchMinElementInRange(int[] arr, int startIndex, int finishIndex) {
+		if (startIndex < 0 || finishIndex >= arr.length || startIndex > finishIndex) {
+			System.out.println("Wrong range\n");
+			return 0;
+		}
+
+		int min = arr[startIndex];
+		for (int i = startIndex + 1; i <= finishIndex; i++) {
+			if (min > arr[i])
+				min = arr[i];
+		}
+		return min;
+	}
+
+	// Search max element in range
+	public static int searchMaxElementInRange(int[] arr, int startIndex, int finishIndex) {
+		if (startIndex < 0 || finishIndex >= arr.length || startIndex > finishIndex) {
+			System.out.println("Wrong range\n");
+			return 0;
+		}
+
+		int max = arr[startIndex];
+		for (int i = startIndex + 1; i <= finishIndex; i++) {
+			if (max < arr[i])
+				max = arr[i];
+		}
+		return max;
+	}
+
 	// Check sorted array
 	public static int isSortedArray(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			if (arr[i] > arr[i + 1])
-				return 0;		
+				return 0;
 		}
 		return 1;
 	}
