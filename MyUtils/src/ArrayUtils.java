@@ -87,8 +87,6 @@ public class ArrayUtils {
 		return res;
 	}
 
-	
-
 	// Check sorted array
 	public static int isSortedArray(int[] arr) {
 		if (arr == null) {
