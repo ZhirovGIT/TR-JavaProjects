@@ -333,17 +333,12 @@ public class ArrayUtils {
 		swap(arr, buf01, buf02);
 	}
 
-	// 
+	// Finds average and prints all numbers greater than the average in the array
 	public static void moreThanAverage(int[] arr) {
-		int average = 0;
-		int sum = 0;
+		int avg = (int) ArrayMathUtils.average(arr);
+		System.out.println(avg);
 		for (int i = 0; i < arr.length; i++) {
-			sum += arr[i];
-		}
-		average = sum / arr.length;
-		System.out.println(average);
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] > average) {
+			if (arr[i] > avg) {
 				System.out.printf("%d ", arr[i]);
 			}
 
