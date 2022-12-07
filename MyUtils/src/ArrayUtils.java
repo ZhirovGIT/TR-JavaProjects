@@ -339,7 +339,7 @@ public class ArrayUtils {
 		System.out.println(avg);
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] > avg) {
-				System.out.printf("%d ", arr[i]);
+				System.out.print(arr[i] + " ");
 			}
 
 		}
