@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 import MyUtils.ArrayUtils;
 
 public class Homework {
