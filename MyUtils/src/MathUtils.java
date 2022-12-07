@@ -73,4 +73,45 @@ public class MathUtils {
 
 		return result;
 	}
+
+	// Sum digits in number
+	public static int sumDigits(int number) {
+		int sum = 0;
+
+		for (; number != 0; number /= 10) {
+			sum += number % 10;
+		}
+
+		return sum;
+	}
+
+	// Sum odd digits in number
+	public static int sumOddDigits(int number) {
+		int sum = 0;
+
+		if (number < 0)
+			return -1;
+
+		for (; number != 0; number /= 10) {
+			if (number % 2 == 1)
+				sum += number % 10;
+		}
+
+		return sum;
+	}
+
+	// Sum even digits in number
+	public static int sumEvenDigits(int number) {
+		int sum = 0;
+
+		if (number < 0)
+			return -1;
+
+		for (; number != 0; number /= 10) {
+			if (number % 2 == 0)
+				sum += number % 10;
+		}
+
+		return sum;
+	}
 }
