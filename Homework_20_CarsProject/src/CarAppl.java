@@ -15,10 +15,10 @@ public class CarAppl {
 		Car dodge = new Car("Dodge", "Blue", 2004, 0.7);
 		
 		Car[] cars = {toyota, honda, kia, volvo, dodge};
-		printDisplay(cars);
+		printArrayForObjects(cars);
 	}
 	
-	public static void printDisplay(Car[] array)
+	public static void printArrayForObjects(Car[] array)
 	{
 		for(int i = 0; i < array.length; i++)
 		{
