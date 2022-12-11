@@ -3,7 +3,7 @@ public class Car {
 	private String model;
 	private String color;
 	private int year; // 1945-2022
-	private double motorValue; // 0.5-0.9
+	private double motorValue; // 0.5-9.0
 
 	// Constructor
 	public Car(String modelCar, String colorCar, int yearCar, double motorValueCar) {
