@@ -15,12 +15,15 @@ public class CarAppl {
 		Car dodge = new Car("Dodge", "Blue", 2004, 0.7);
 		
 		Car[] cars = {toyota, honda, kia, volvo, dodge};
-//		for(int i = 0; i < cars.length; i++)
-//		{
-//			System.out.println("Color " + cars[i].getColor());
-//			System.out.println("Year " + cars[i].getYear());
-//			System.out.println("Motor value " + cars[i].getMotorValue());
-//			System.out.println();
-//		}
+		printDisplay(cars);
 	}
+	
+	public static void printDisplay(Car[] array)
+	{
+		for(int i = 0; i < array.length; i++)
+		{
+			array[i].display();
+		}
+	}
+	
 }

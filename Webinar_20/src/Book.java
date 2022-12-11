@@ -7,11 +7,17 @@ public class Book {
 	private String genre;
 	private boolean cover;
 	private String identifier;
-
+	
+//	public Book() {
+//		// TODO Auto-generated constructor stub
+//	}
+	
 	public Book(int amountPages01, String title01, String author01, int yearOfIssue01, String genre01, boolean cover01,
 			String identifier01) {
 		if (amountPages01 > 0 && amountPages01 < 100_000)
 			amountPages = amountPages01;
+		else
+			amountPages = 0;
 
 		if (title01 != null)
 			title = title01;
@@ -25,6 +31,8 @@ public class Book {
 
 		if (yearOfIssue01 > 1700 && yearOfIssue01 <= 2022)
 			yearOfIssue = yearOfIssue01;
+		else
+			yearOfIssue = 1700;
 
 		if (genre01 != null)
 			genre = genre01;
@@ -48,8 +56,10 @@ public class Book {
 
 			if (flag) // (flag) -> true; (!flag) -> false
 				identifier = identifier01;
-			else
+			else {
 				System.out.println("Wrong identifier!");
+				identifier = "My-00000";
+			}
 		}
 	}
 
@@ -136,10 +146,11 @@ public class Book {
 				System.out.println("Wrong identifier!");
 		}
 	}
-	
-	public void display()
-	{
-		System.out.println("Number of pages: " + amountPages + " Title: " + title);
+
+	public void display() {
+		System.out.println(
+				"Number of pages: " + amountPages + ", Title: " + title + ", Author: " + author + ", Year of issue: "
+						+ yearOfIssue + ", Genre: " + genre + ", Cover: " + cover + ", Identifier: " + identifier);
 	}
 
 }
