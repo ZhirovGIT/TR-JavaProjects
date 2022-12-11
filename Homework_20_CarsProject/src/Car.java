@@ -18,7 +18,7 @@ public class Car {
 		if (yearCar >= 1945 && yearCar <= 2022)
 			year = yearCar;
 
-		if (motorValueCar >= 0.5 && motorValueCar <= 0.9)
+		if (motorValueCar >= 0.5 && motorValueCar <= 9.0)
 			motorValue = motorValueCar;
 	}
 
@@ -49,16 +49,12 @@ public class Car {
 	}
 
 	public void setMotorValue(double motorValueCar) {
-		if (motorValueCar >= 0.5 && motorValueCar <= 0.9)
+		if (motorValueCar >= 0.5 && motorValueCar <= 9.0)
 			motorValue = motorValueCar;
 	}
 
 	// Print information about the object
 	public void display() {
-		System.out.println(model);
-		System.out.println("Color: " + color);
-		System.out.println("Year: " + year);
-		System.out.println("Motor value: " + motorValue);
-		System.out.println();
+		System.out.println(model + ", Color: " + color + ", Year: " + year + ", Motor value: " + motorValue);
 	}
 }
