@@ -7,10 +7,10 @@ public class Car {
 
 	// Constructor
 	public Car(String modelCar, String colorCar, int yearCar, double motorValueCar) {
-		if (modelCar != null && modelCar.isEmpty())
+		if (modelCar != null && !modelCar.isEmpty())
 			model = modelCar;
 
-		if (colorCar != null && colorCar.isEmpty())
+		if (colorCar != null && !colorCar.isEmpty())
 			color = colorCar;
 		else
 			color = "No color!";
