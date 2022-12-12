@@ -15,11 +15,9 @@ public class Car {
 		else
 			color = "No color!";
 
-		if (yearCar >= 1945 && yearCar <= 2022)
-			year = yearCar;
+		setYear(yearCar);
 
-		if (motorValueCar >= 0.5 && motorValueCar <= 9.0)
-			motorValue = motorValueCar;
+		setMotorValue(motorValueCar);
 	}
 
 	public String getModel() {
@@ -42,6 +40,12 @@ public class Car {
 
 	public int getYear() {
 		return year;
+	}
+	
+	public void setYear(int yearCar)
+	{
+		if (yearCar >= 1945 && yearCar <= 2022)
+			year = yearCar;
 	}
 
 	public double getMotorValue() {
